@@ -2,6 +2,10 @@
 
 <% @a.each do |person| %>
 
-<%= person.name %>
+<%= person.name %> - <%= person.age %> - <%= link_to 'Editar', edit_person_path(person.id) %> - <%= link_to 'Remover', person, method: :delete %>
+
+  <br>
 
 <% end %>
+
+<%= link_to 'Criar pessoa', people_new_path %>
